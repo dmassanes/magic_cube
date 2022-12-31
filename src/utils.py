@@ -26,14 +26,14 @@ DEFAULT_COLORS = {
 DEFAULT_VIEW_SETTINGS = {
     "gridspec": "24",
     "views": [
-        {"title": "U-F-R", "elev": 30, "azim": -60, "disable_mouse_rotation": True},
-        {"title": "U-R-B", "elev": 30, "azim": 30, "disable_mouse_rotation": True},
-        {"title": "U-B-L", "elev": 30, "azim": 120, "disable_mouse_rotation": True},
-        {"title": "U-L-F", "elev": 30, "azim": 210, "disable_mouse_rotation": True},
-        {"title": "D-L-B", "elev": 210, "azim": -30, "disable_mouse_rotation": True},
-        {"title": "D-F-L", "elev": 210, "azim": 60, "disable_mouse_rotation": True},
-        {"title": "D-R-F", "elev": 210, "azim": 150, "disable_mouse_rotation": True},
-        {"title": "D-B-R", "elev": 210, "azim": 240, "disable_mouse_rotation": True}
+        {"title": "U-F-R", "elev": 30, "azim": -60, "disable_mouse_rotation": True, "face_ids": ["U", "F", "R"]},
+        {"title": "U-R-B", "elev": 30, "azim": 30, "disable_mouse_rotation": True, "face_ids": ["U", "R", "B"]},
+        {"title": "U-B-L", "elev": 30, "azim": 120, "disable_mouse_rotation": True, "face_ids": ["U", "B", "L"]},
+        {"title": "U-L-F", "elev": 30, "azim": 210, "disable_mouse_rotation": True, "face_ids": ["U", "L", "F"]},
+        {"title": "D-L-B", "elev": 210, "azim": -30, "disable_mouse_rotation": True, "face_ids": ["D", "L", "B"]},
+        {"title": "D-F-L", "elev": 210, "azim": 60, "disable_mouse_rotation": True, "face_ids": ["D", "F", "L"]},
+        {"title": "D-R-F", "elev": 210, "azim": 150, "disable_mouse_rotation": True, "face_ids": ["D", "R", "F"]},
+        {"title": "D-B-R", "elev": 210, "azim": 240, "disable_mouse_rotation": True, "face_ids": ["D", "B", "R"]}
     ]
 }
 

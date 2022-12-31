@@ -132,10 +132,6 @@ class MagicCubeMPL():
             ]
         }
 
-        # randomly rotate the cube
-        for rot in np.random.choice(list(self.__rotations.keys()), r):
-            self.__rotate(rot)
-
         # set up the figure and axes
         self.__figure = plt.figure(figsize=figsize)
         def __init_ax(pos, xyzlim, collection, box_aspect, view):
@@ -161,6 +157,10 @@ class MagicCubeMPL():
             )
             for i, view in enumerate(self.__view_settings["views"])
         ]
+
+        # randomly rotate the cube
+        for rot in np.random.choice(list(self.__rotations.keys()), r):
+            self.__rotate(rot)
         
         # init the key events
         def __key_press_event(event):
