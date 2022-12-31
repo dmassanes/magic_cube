@@ -1,5 +1,4 @@
 import matplotlib.pyplot as plt
-import argparse
 from cube_mpl import *
 
 if __name__ == "__main__":
