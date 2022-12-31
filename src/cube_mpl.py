@@ -133,17 +133,20 @@ class MagicCubeMPL():
         }
 
         # set up the figure and axes
-        self.__figure = plt.figure(figsize=figsize)
         def __init_ax(pos, xyzlim, collection, box_aspect, view):
             ax = self.__figure.add_subplot(pos, projection="3d")
             ax.add_collection(collection)
-            ax.set(title=view["title"], xlim =xyzlim, ylim =xyzlim, zlim =xyzlim)
+            ax.set(xlim =xyzlim, ylim =xyzlim, zlim =xyzlim)
             ax.set_box_aspect(box_aspect)
             ax.set_axis_off()
             if view["disable_mouse_rotation"]:
                 ax.disable_mouse_rotation()
+            for id in view["face_ids"]:
+                verts = self.__face_verts[self.__face_ranges[id].start + self.__nn // 2]
+                ax.text(verts[:, 0].mean(), verts[:, 1].mean(), verts[:, 2].mean(), id)
             ax.view_init(view["elev"], view["azim"])
             return ax
+        self.__figure = plt.figure(figsize=figsize)
         xyzlim = (-n / 2 - 0.1, n / 2 + 0.1)
         box_aspect = (np.ptp(self.__face_verts[:,:,0]), np.ptp(self.__face_verts[:,:,1]), np.ptp(self.__face_verts[:,:,2]))
         self.__view_settings = view_settings

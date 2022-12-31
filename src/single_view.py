@@ -21,7 +21,6 @@ if __name__ == "__main__":
     nn = cube._MagicCubeMPL__nn
     for id, range in face_ranges.items():
         verts = face_verts[range.start + nn // 2]
-        x, y, z = verts[:, 0].mean(), verts[:, 1].mean(), verts[:, 2].mean()
         ax.text(verts[:, 0].mean(), verts[:, 1].mean(), verts[:, 2].mean(), id)
 
     plt.show()
