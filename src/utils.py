@@ -3,7 +3,7 @@ import argparse
 
 def arg_parser():
     parser = argparse.ArgumentParser(description="MagicCubeMPL")
-    parser.add_argument("-n", dest="n", type=int, required=False, default=DEFAULT_N, help="cube size (2 or 3)")
+    parser.add_argument("-n", dest="n", type=int, required=False, default=DEFAULT_N, help="cube size (only 2 or 3 are supported yet)")
     parser.add_argument("-r", dest="r", type=int, required=False, default=DEFAULT_RANDOM_ROTATIONS, help="amount of random rotations when initializing")
     return parser
 
